@@ -183,3 +183,9 @@ Click Create Repository
 Repository Created SUccessfully with Default branch main
 
 <img width="1317" height="697" alt="image" src="https://github.com/user-attachments/assets/ad4a2344-159b-49e4-a83e-e85df6fdbb53" />
+
+
+26/05/2026::
+=============
+
+generate the ssh keys
