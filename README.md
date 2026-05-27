@@ -195,7 +195,7 @@ Generate SSHKeys:: to Integarte Git to Github
 syntax::ssh-keygen -t ed25519 -C "your_email@example.com"
 
 
->ssh-keygen -t ed25519 -C "srinfotechbatch5@gmail.com"
+>ssh-keygen -t ed25519 -C "srinfotechbatch8@gmail.com"
 
 Keys avaibale path and save the key (/c/Users/HP/.ssh/id_ed25519):
 
