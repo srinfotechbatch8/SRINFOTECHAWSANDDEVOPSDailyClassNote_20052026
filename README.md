@@ -530,7 +530,12 @@ please made some changes in local files and please verify the status of the file
 
 please complete above activity and let me know if you guys facing any issues
 
+if you faces any commits issues in gitbash, you should be authenticat with below commnds
 
+
+>git config --global user.email "srinivas@gmail.com"
+
+>git config --global user.name  "srinivas"
 
 
 28/05/2026::
