@@ -738,3 +738,256 @@ To github.com:srinfotechbatch8/java-hello-world-with-maven.git
 HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/java-hello-world-with-maven (feature/2026.06.12)
 $
 
+
+29/05/2026::
+==============
+
+
+<img width="1778" height="766" alt="image" src="https://github.com/user-attachments/assets/4fb89bca-3a4a-4edf-b9b4-1285e20fb410" />
+
+
+A GitHub branching strategy is crucial for maintaining an organized workflow in version control. There are different strategies depending on the size of the project, the number of team members, and the desired workflow. Here are some common branching strategies used in GitHub:
+
+main or master branch:: 
+
+This is default branch and whenever we created the empty Repository by defauly main or master branche is created automatically.
+main or master branch always stable and live code 
+
+feature branch:: 
+
+It could be a new feature, an improvement of existing features, bug fixes, or any other changes. A feature branch is a type of branch in Git typically used to develop new features for the software.feature branch will created from main or master OR feature branch created from latest release branch always based on the release cycle
+
+formate:: feature/YYYY.MM.DD
+ feature/2025.08.05
+
+release branch:: 
+
+Based on the release we have created release branch accourdingly and starts the next release cycle.
+always release branch created from master only and master have stable and live code and post release we shold merged code changes to master branch only
+
+release/2025.08.10
+
+bugfix branch::
+
+A bugfix branch is a Git branch created to fix defects or issues in the code without affecting ongoing development.
+
+formate:: bugfix/YYYY.MM.DD
+ bugfix/2025.08.05
+
+ hotfix branch::
+
+ A hotfix branch is a temporary branch created to fix a critical issue in production environments.
+ a hotfix starts from the production branch (main or master) so the fix can be released quickly.
+
+ formate:: hotfix/YYYY.MM.DD
+ hotfix/2025.08.05
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f490413f-aee3-4358-ac74-e080159ba12f" />
+
+
+Lab Practice::
+===============
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest
+$ git clone git@github.com:srinfotechbatch8/HDFC-Bank.git
+Cloning into 'HDFC-Bank'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest
+$ cd HDFC-Bank
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (main)
+$ git checkout feature/2026.08.16
+error: pathspec 'feature/2026.08.16' did not match any file(s) known to git
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (main)
+$ git pull
+From github.com:srinfotechbatch8/HDFC-Bank
+ * [new branch]      feature/2026.08.16 -> origin/feature/2026.08.16
+Already up to date.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (main)
+$ git checkout feature/2026.08.16
+M       README.md
+branch 'feature/2026.08.16' set up to track 'origin/feature/2026.08.16'.
+Switched to a new branch 'feature/2026.08.16'
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git status
+On branch feature/2026.08.16
+Your branch is up to date with 'origin/feature/2026.08.16'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .editorconfig
+        .gitattributes
+        .gitignore
+        .npmrc
+        .travis.yml
+        .yo-rc.json
+        index.js
+        license
+        package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git status
+On branch feature/2026.08.16
+Your branch is up to date with 'origin/feature/2026.08.16'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .editorconfig
+        new file:   .gitattributes
+        new file:   .gitignore
+        new file:   .npmrc
+        new file:   .travis.yml
+        new file:   .yo-rc.json
+        modified:   README.md
+        new file:   index.js
+        new file:   license
+        new file:   package.json
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git commit -m "this is my first commit for HDFC bank app implementatuions"
+[feature/2026.08.16 cdbb161] this is my first commit for HDFC bank app implementatuions
+ 10 files changed, 348 insertions(+), 1 deletion(-)
+ create mode 100644 .editorconfig
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 .npmrc
+ create mode 100644 .travis.yml
+ create mode 100644 .yo-rc.json
+ create mode 100644 index.js
+ create mode 100644 license
+ create mode 100644 package.json
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 4.27 KiB | 875.00 KiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:srinfotechbatch8/HDFC-Bank.git
+   c8210a5..cdbb161  feature/2026.08.16 -> feature/2026.08.16
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git checkout bugfix/2026.08.16
+error: pathspec 'bugfix/2026.08.16' did not match any file(s) known to git
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git pull
+remote: Enumerating objects: 2, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (2/2), 1.76 KiB | 78.00 KiB/s, done.
+From github.com:srinfotechbatch8/HDFC-Bank
+ * [new branch]      bugfix/2026.08.16  -> origin/bugfix/2026.08.16
+   c8210a5..b763181  main               -> origin/main
+ * [new branch]      release/2026.08.16 -> origin/release/2026.08.16
+Already up to date.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (feature/2026.08.16)
+$ git checkout bugfix/2026.08.16
+branch 'bugfix/2026.08.16' set up to track 'origin/bugfix/2026.08.16'.
+Switched to a new branch 'bugfix/2026.08.16'
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (bugfix/2026.08.16)
+$ git status
+On branch bugfix/2026.08.16
+Your branch is up to date with 'origin/bugfix/2026.08.16'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (bugfix/2026.08.16)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (bugfix/2026.08.16)
+$ git commit -m "fixed the bug"
+[bugfix/2026.08.16 dcbb098] fixed the bug
+ 1 file changed, 6 insertions(+)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (bugfix/2026.08.16)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 320 bytes | 160.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:srinfotechbatch8/HDFC-Bank.git
+   0604e1c..dcbb098  bugfix/2026.08.16 -> bugfix/2026.08.16
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (bugfix/2026.08.16)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 896 bytes | 89.00 KiB/s, done.
+From github.com:srinfotechbatch8/HDFC-Bank
+ * [new branch]      hotfix/2026.08.16  -> origin/hotfix/2026.08.16
+   0604e1c..540cfd7  release/2026.08.16 -> origin/release/2026.08.16
+Already up to date.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (bugfix/2026.08.16)
+$ git checkout hotfix/2026.08.16
+branch 'hotfix/2026.08.16' set up to track 'origin/hotfix/2026.08.16'.
+Switched to a new branch 'hotfix/2026.08.16'
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (hotfix/2026.08.16)
+$ git status
+On branch hotfix/2026.08.16
+Your branch is up to date with 'origin/hotfix/2026.08.16'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (hotfix/2026.08.16)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (hotfix/2026.08.16)
+$ git commit -m "fixed the production issues"
+[hotfix/2026.08.16 3d75765] fixed the production issues
+ 1 file changed, 7 insertions(+)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (hotfix/2026.08.16)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:srinfotechbatch8/HDFC-Bank.git
+   b763181..3d75765  hotfix/2026.08.16 -> hotfix/2026.08.16
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Batch8Latest/HDFC-Bank (hotfix/2026.08.16)
+$
